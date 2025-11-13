@@ -1,0 +1,109 @@
+/* warna-fontstyle */
+body {
+  color: #333333 !important;
+  font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  /* font-weight: ; */
+  font-style: normal;
+}
+
+/*ukuran side bar*/
+@media (max-width: 767.98px) {
+  .offcanvas-end {
+    --bs-offcanvas-width: 80% !important; /* layar kecil */
+  }
+  .nav-link-custom::after {
+    bottom: -0.1rem !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  .offcanvas-end {
+    --bs-offcanvas-width: 350px !important; /* tablet */
+  }
+  .nav-link-custom::after {
+    bottom: -0rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .offcanvas-end {
+    --bs-offcanvas-width: 300px !important; /* desktop */
+  }
+  .nav-link-custom::after {
+    bottom: 0;
+  }
+}
+
+/* blur efek */
+.blur-effect {
+  background-color: rgba(255, 255, 255, 0.6) !important; /* warna semi transparan */
+  backdrop-filter: blur(3px) !important; /* efek blur */
+  -webkit-backdrop-filter: blur(3px) !important; /* untuk Safari */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important; /* biar keliatan ada batas halus */
+}
+
+/* custom btn di hero section START*/
+.custom-btn {
+  position: relative;
+  color: #000000; /* ganti sesuai tema */
+  border: none;
+  padding-bottom: 4px;
+}
+
+.custom-btn::after {
+  content: "";
+  position: absolute;
+  left: 50% ;
+  bottom: 0;
+  transform: translateX(-50%);
+  transform-origin: center;
+  width: 60%;
+  height: 2px; /* ketebalan garis */
+  background-color: #000000; /* warna garis */
+  transition: width 0.3s ease;
+}
+
+.custom-btn:hover::after {
+  width: 100%;
+}
+
+/* custom hover btn */
+.custom-btn:hover,
+.custom-btn:focus,
+.custom-btn:active {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+/* custom btn di hero section END*/
+
+/* custom btn di navbar START*/
+.nav-link-custom {
+  position: relative;
+  /* color: #000000; */
+  border: none;
+  padding-bottom: 4px;
+}
+
+.nav-link-custom::after {
+  content: "";
+  position: absolute;
+  left: 50% ;
+  bottom: -0.65rem;
+  transform: translateX(-50%);
+  transform-origin: center;
+  width: 0;
+  height: 2px; /* ketebalan garis */
+  background-color: #000000; /* warna garis */
+  transition: width 0.3s ease;
+}
+
+.nav-link-custom:hover::after {
+  width: 100%;
+}
+
+/* custom btn di navbar END*/
+
+.img-rotate-7 {
+  transform: rotate(7deg);
+}
