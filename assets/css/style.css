@@ -107,3 +107,7 @@ body {
 .img-rotate-7 {
   transform: rotate(7deg);
 }
+/* ngasih jarak dari section ke ujung atas pas di scroll */
+.container {
+  scroll-margin-top: 2rem;
+}
