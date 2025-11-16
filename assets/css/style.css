@@ -1,35 +1,45 @@
 /* warna-fontstyle */
 body {
   color: #333333 !important;
-  font-family: "Jost", sans-serif;
+  font-family: "Lexend", sans-serif;
   font-optical-sizing: auto;
-  /* font-weight: ; */
+  font-weight: 300;
   font-style: normal;
+}
+ul {
+  list-style-type: disc;
+}
+.momo{
+  font-family: "Momo Signature", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.moon {
+  color: #333333 !important;
+}
+.moon-muted {
+  color: #666666 !important;
+}
+
+.moonh1 {
+  color: #333333 !important;
+  font-weight: 200 !important;
 }
 
 /*ukuran side bar*/
 @media (max-width: 767.98px) {
-  .offcanvas-end {
-    --bs-offcanvas-width: 80% !important; /* layar kecil */
-  }
   .nav-link-custom::after {
     bottom: -0.1rem !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1199.98px) {
-  .offcanvas-end {
-    --bs-offcanvas-width: 350px !important; /* tablet */
-  }
   .nav-link-custom::after {
     bottom: -0rem;
   }
 }
 
 @media (min-width: 1200px) {
-  .offcanvas-end {
-    --bs-offcanvas-width: 300px !important; /* desktop */
-  }
   .nav-link-custom::after {
     bottom: 0;
   }
@@ -111,3 +121,13 @@ body {
 .container {
   scroll-margin-top: 2rem;
 }
+/* * {
+  outline: 1px solid red;
+} */
+
+
+/* INLINE START */
+.inline {
+    display: inline;
+}
+/* INLINE END */
