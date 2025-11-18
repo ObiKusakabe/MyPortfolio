@@ -1,4 +1,4 @@
-# My Portofolio
+# My Portfolio
 
 obikusakabe.github.io/MyPortofolio/
 
