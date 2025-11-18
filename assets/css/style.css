@@ -14,6 +14,7 @@ ul {
   font-weight: 400;
   font-style: normal;
 }
+
 .moon {
   color: #333333 !important;
   text-decoration: none;
@@ -21,13 +22,12 @@ ul {
 .moon-muted {
   color: #666666 !important;
 }
-
 .moonh1 {
   color: #333333 !important;
   font-weight: 200 !important;
 }
 
-/*ukuran side bar*/
+/* START posisi (responsif) y dari animasi garis nav-link*/
 @media (max-width: 767.98px) {
   .nav-link-custom::after {
     bottom: -0.1rem !important;
@@ -45,23 +45,24 @@ ul {
     bottom: 0;
   }
 }
+/* END posisi (responsif) y dari animasi garis nav-link*/
 
-/* blur efek */
+/* START blur efek */
 .blur-effect {
   background-color: rgba(255, 255, 255, 0.6) !important; /* warna semi transparan */
   backdrop-filter: blur(3px) !important; /* efek blur */
   -webkit-backdrop-filter: blur(3px) !important; /* untuk Safari */
   border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important; /* biar keliatan ada batas halus */
 }
+/* END blur efek */
 
-/* custom btn di hero section START*/
+/* START custom btn di hero section */
 .custom-btn {
   position: relative;
   color: #000000; /* ganti sesuai tema */
   border: none;
   padding-bottom: 4px;
 }
-
 .custom-btn::after {
   content: "";
   position: absolute;
@@ -74,28 +75,18 @@ ul {
   background-color: #000000; /* warna garis */
   transition: width 0.3s ease;
 }
-
 .custom-btn:hover::after {
   width: 100%;
 }
+/* END custom btn di hero section */
 
-/* custom hover btn */
-.custom-btn:hover,
-.custom-btn:focus,
-.custom-btn:active {
-  background-color: transparent !important;
-  box-shadow: none !important;
-}
-/* custom btn di hero section END*/
-
-/* custom btn di navbar START*/
+/* START custom btn di navbar */
 .nav-link-custom {
   position: relative;
   /* color: #000000; */
   border: none;
   padding-bottom: 4px;
 }
-
 .nav-link-custom::after {
   content: "";
   position: absolute;
@@ -108,30 +99,29 @@ ul {
   background-color: #000000; /* warna garis */
   transition: width 0.3s ease;
 }
-
 .nav-link-custom:hover::after, .nav-link-custom.active::after {
   width: 100%;
 }
-
-/* custom btn di navbar END*/
+/* END custom btn di navbar */
 
 .img-rotate-7 {
   transform: rotate(7deg);
 }
-/* ngasih jarak dari section ke ujung atas pas di scroll */
+
+/* START ngasih jarak dari section ke ujung atas pas di scroll */
 .container {
   scroll-margin-top: 2rem;
 }
-/* * {
-  outline: 1px solid red;
-} */
+/* END ngasih jarak dari section ke ujung atas pas di scroll */
 
 
-/* INLINE START */
+
+
+/* START INLINE */
 .inline {
     display: inline;
 }
-/* INLINE END */
+/* END INLINE */
 
 /* Wrapper tabs */
 .resume-tabs {
@@ -186,12 +176,12 @@ ul {
     width: 100%;
 }
 
-/* Hide ALL tab content by default */
+/* hide tab non aktif */
 .tab-pane {
     display: none;
 }
 
-/* Show only active */
+/* Show active */
 .tab-pane.active.show {
     display: block;
     animation: fadeIn .3s ease;
@@ -208,11 +198,6 @@ ul {
 .portfolio-card {
     transition: 0.3s ease;
 }
-
-.portfolio-card:hover {
-    transform: translateY(-5px);
-}
-
 .portfolio-img {
     width: 100%;
     height: 230px;
@@ -220,19 +205,34 @@ ul {
     border-radius: 15px;
     transition: 0.3s ease;
 }
-
 .portfolio-card:hover .portfolio-img {
-    transform: scale(1.03);
+    /* transform: scale(1.03); */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.22) !important;
 }
-
 .portfolio-card h4 {
     font-weight: 500;
     font-size: 1.4rem;
 }
-
 .moon-muted {
     color: #777;
     font-size: 0.95rem;
 }
-
 /* card proyek-sertifikat END */
+
+
+/* START tech tag */
+.tech-tag {
+    display: inline-block;
+    background: #f1f1f1; 
+    margin-right: 6px;
+    margin-top: 6px;
+    transition: 0.2s ease;
+}
+.tech-tag:hover {
+    background: #e5e5e5;
+}
+/* END tech tag */
+
+/* {
+  outline: 1px solid red;
+} */
