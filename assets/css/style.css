@@ -5,6 +5,7 @@ body {
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
+  overflow-x: hidden;
 }
 ul {
   list-style-type: disc;
@@ -297,4 +298,5 @@ ul {
 
 /* {
   outline: 1px solid red;
+
 } */
