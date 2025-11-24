@@ -10,15 +10,5 @@ var typed = new Typed("#typed", {
   backDelay: 1300,
   loop: true,
 });
-var typed = new Typed("#typed2", {
-  strings: [
-    // "Saya Roby -",
-    "Belajar",
-    "Berkembang",
-    "Berbagi"
-  ],
-  typeSpeed: 100,
-  backSpeed: 70,
-  backDelay: 1800,
-  loop: true,
-});
+
+
