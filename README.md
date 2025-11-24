@@ -1,6 +1,6 @@
 # My Portfolio
 
-obikusakabe.github.io/MyPortofolio/
+obikusakabe.github.io/MyPortfolio/
 
 Bootstrap v5.3.8
 
