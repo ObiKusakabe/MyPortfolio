@@ -1,0 +1,278 @@
+/* warna-fontstyle */
+body {
+  color: #333333 !important;
+  font-family: "Lexend", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  overflow-x: hidden;
+}
+ul {
+  list-style-type: disc;
+}
+.momo{
+  font-family: "Momo Signature", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* START font moon */
+.moon {
+  color: #333333 !important;
+  text-decoration: none;
+}
+.moon-muted {
+  color: #666666 !important;
+}
+.moonh1 {
+  color: #333333 !important;
+  font-weight: 200 !important;
+}
+/* END font moon */
+
+/* START posisi (responsif) y dari animasi garis nav-link*/
+@media (max-width: 767.98px) {
+  .nav-link-custom::after {
+    bottom: -0.1rem !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  .nav-link-custom::after {
+    bottom: -0rem;
+  }
+}
+@media (min-width: 1200px) {
+  .nav-link-custom::after {
+    bottom: 0;
+  }
+}
+/* END posisi (responsif) y dari animasi garis nav-link*/
+
+/* START blur efek */
+.blur-effect {
+  background-color: rgba(255, 255, 255, 0.6) !important; /* warna semi transparan */
+  backdrop-filter: blur(3px) !important; /* efek blur */
+  -webkit-backdrop-filter: blur(3px) !important; /* untuk Safari */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important; /* biar keliatan ada batas halus */
+}
+/* END blur efek */
+
+/* START custom btn di hero section */
+.custom-btn {
+  position: relative;
+  color: #000000; /* ganti sesuai tema */
+  border: none;
+  padding-bottom: 4px;
+}
+.custom-btn::after {
+  content: "";
+  position: absolute;
+  left: 50% ;
+  bottom: 0;
+  transform: translateX(-50%);
+  transform-origin: center;
+  width: 60%;
+  height: 2px; /* ketebalan garis */
+  background-color: #000000; /* warna garis */
+  transition: width 0.3s ease;
+}
+.custom-btn:hover::after {
+  width: 100%;
+}
+/* END custom btn di hero section */
+
+/* START custom btn di navbar */
+.nav-link-custom {
+  position: relative;
+  /* color: #000000; */
+  border: none;
+  padding-bottom: 4px;
+}
+.nav-link-custom::after {
+  content: "";
+  position: absolute;
+  left: 50% ;
+  bottom: -0.65rem;
+  transform: translateX(-50%);
+  transform-origin: center;
+  width: 0;
+  height: 2px; /* ketebalan garis */
+  background-color: #000000; /* warna garis */
+  transition: width 0.3s ease;
+}
+.nav-link-custom:hover::after, .nav-link-custom.active::after {
+  width: 100%;
+}
+/* END custom btn di navbar */
+
+.img-rotate-7 {
+  transform: rotate(7deg);
+}
+
+/* START ngasih jarak dari section ke ujung atas pas di scroll */
+.container {
+  scroll-margin-top: 2rem;
+}
+/* END ngasih jarak dari section ke ujung atas pas di scroll */
+
+
+/* START INLINE */
+.inline {
+    display: inline;
+}
+/* END INLINE */
+
+/* START Wrapper tabs */
+.resume-tabs {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.resume-tabs li {
+  display: inline-block;
+}
+/* END Wrapper tabs */
+
+/* Link tab */
+.resume-tab-link {
+    font-size: 1.1rem;
+    color: #9f9f9f;
+    text-decoration: none;
+    padding-bottom: .4rem;
+    position: relative;
+    transition: color .3s ease;
+}
+
+.resume-tab-link .tab-number {
+    margin-right: .5rem;
+    font-weight: 400;
+}
+/* Hover */
+.resume-tab-link:hover {
+    color: #000;
+}
+/* Active state */
+.resume-tab-link.active {
+    color: #000;
+    font-weight: 600;
+}
+
+/* START animasi underline */
+.resume-tab-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: #000;
+  transition: width .3s ease;
+}
+.resume-tab-link.active::after {
+  width: 100%;
+}
+/* END animasi underline */
+
+
+/* START TAB */
+.tab-pane {/* hide tab non aktif */
+  display: none;
+}
+.tab-pane.active.show {/* Show active */
+  display: block;
+  animation: fadeIn .3s ease;
+}
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+/* END TAB */
+
+/* START card proyek-sertifikat */
+.portfolio-card {
+    transition: 0.3s ease;
+}
+.portfolio-img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: 0.3s ease;
+}
+.portfolio-card:hover .portfolio-img  {
+    /* transform: scale(1.03); */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.22) !important;
+    
+}
+.portfolio-card h4 {
+    font-weight: 500;
+    font-size: 1.4rem;
+}
+.moon-muted {
+    color: #777;
+    font-size: 0.95rem;
+}
+/* END card proyek-sertifikat */
+
+
+/* START tech tag */
+.tech-tag {
+    display: inline-block;
+    background: #f1f1f1; 
+    margin-right: 6px;
+    margin-top: 6px;
+    transition: 0.2s ease;
+}
+.tech-tag:hover {
+    background: #e5e5e5;
+}
+/* END tech tag */
+
+/* START accordion */
+.portfolio-card .accordion-button {
+    /* note biar gaada background color nya */
+    /* background: #000000; */
+    font-weight: 500;
+    border-radius: 8px;
+}
+/* .portfolio-card .accordion-button:not(.collapsed) {
+    
+} */
+.portfolio-card .accordion-item {
+    border: none;
+    margin-bottom: 8px;
+}
+
+
+.accordion-button {/* HAPUS background default collapse */
+    position: relative;
+    padding-left: 2rem; /* beri ruang untuk garis */
+    box-shadow: none !important;
+    color: #333333;
+}
+.accordion-button::before {/* Garis vertikal accordion */
+    content: "";
+    position: absolute;
+    left: 0.8rem;
+    top: 50%;
+    transform: translateY(-50%) scaleY(0);
+    width: 3px;
+    height: 70%;         /* panjang garis */
+    background-color: #333333;
+    transform-origin: bottom; 
+    transition: transform 0.3s ease;
+    border-radius: 2px;
+    
+}
+.accordion-button:hover::before {/* Saat hover */
+    transform: translateY(-50%) scaleY(1);
+}
+.accordion-button:not(.collapsed)::before {/* Saat accordion sedang terbuka */
+    transform: translateY(-50%) scaleY(1);
+}
+/* END accordion*/
+
+
+/* * {
+outline: 1px solid red;
+} */
