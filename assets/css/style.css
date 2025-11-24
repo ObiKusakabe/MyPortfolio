@@ -243,7 +243,11 @@ ul {
     margin-bottom: 8px;
 }
 
-
+.accordion-button:not(.collapsed) {
+    background-color: transparent !important; /* Hilangkan biru */
+    color: inherit !important;               /* Ikut warna teks normal */
+    box-shadow: none !important;             /* Hilangkan efek outline */
+}
 .accordion-button {/* HAPUS background default collapse */
     position: relative;
     padding-left: 2rem; /* beri ruang untuk garis */
