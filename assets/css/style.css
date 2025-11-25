@@ -206,8 +206,9 @@ ul {
 }
 .accordion-body>img:hover  {
     /* transform: scale(1.03); */
-    box-shadow: 0 10px 25px rgba(0,0,0,0.22) !important;
+    box-shadow: 0 20px 35px rgba(0,0,0,0.22) !important;
     cursor: zoom-in;
+    transition: 0.4s ease;
 }
 .image-preview-overlay {
   cursor: zoom-out;
@@ -296,7 +297,7 @@ ul {
   align-items: center;
   opacity: 0;
   pointer-events: none;
-  transition: opacity .35s ease;
+  transition: opacity 0.35s ease;
   z-index: 9999;
 }
 /* Aktif */
