@@ -67,11 +67,11 @@ ul {
 .custom-btn::after {
   content: "";
   position: absolute;
-  left: 50% ;
+  left: 0 ;
   bottom: 0;
-  transform: translateX(-50%);
+  /* transform: translateX(100%); */
   transform-origin: center;
-  width: 60%;
+  width: 30%;
   height: 2px; /* ketebalan garis */
   background-color: #000000; /* warna garis */
   transition: width 0.3s ease;
@@ -202,7 +202,15 @@ ul {
 .portfolio-card:hover .portfolio-img  {
     /* transform: scale(1.03); */
     box-shadow: 0 10px 25px rgba(0,0,0,0.22) !important;
-    
+    cursor: zoom-in;
+}
+.accordion-body>img:hover  {
+    /* transform: scale(1.03); */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.22) !important;
+    cursor: zoom-in;
+}
+.image-preview-overlay {
+  cursor: zoom-out;
 }
 .portfolio-card h4 {
     font-weight: 500;
@@ -276,7 +284,45 @@ ul {
 }
 /* END accordion*/
 
+/* START Portfolio image preview */
+/* BACKDROP */
+.image-preview-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .35s ease;
+  z-index: 9999;
+}
+/* Aktif */
+.image-preview-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+/* Gambar besar */
+.image-preview-overlay img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+  box-shadow: 0 0 40px rgba(0,0,0,0.5);
+  transform: scale(0.8);
+  transition: transform .35s ease;
+}
+/* Saat aktif */
+.image-preview-overlay.active img {
+  transform: scale(1);
+}
+/* Cursor pointer untuk gambar portfolio */
+.portfolio-img {
+  
+}
 
+/* END Portfolio image preview */
 /* * {
 outline: 1px solid red;
 } */
