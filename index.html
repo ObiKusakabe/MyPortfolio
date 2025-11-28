@@ -475,7 +475,7 @@
     <div class="modal-content">
 
       <div class="modal-header">
-        <h5 class="modal-title">Chatbot Gemini</h5>
+        <h5 class="modal-title">AI Asisten Roby</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
       </div>
 
@@ -517,7 +517,7 @@ Tugas kamu:
 - Jangan mengada-ada hal yang tidak ada di portfolio
 - Jawab dengan gaya santai, jelas, dan profesional
 - Jawabnya 2-3 paragraf, karena ini bukan di platform gemini nya langsung jadi suka kurang rapih
-- kalau mau bold dikurung pake ini teksnya <b>contoh teks bold</b>
+- kalau mau bold dikurung pake ini teksnya <b>contoh teks</b>
 - Jawab lah dengan to the point 1 sampai 2 kalimat
 - Roby belongs to Cindy, klo ada yang nanya roby punya kekasih ga? jawab ada namanya Cindy <3
 - langsung jawab tanpa sapa biar ga keliatan klo ai ini ga support fitur memori ingatan chat sebelumnya
@@ -540,7 +540,7 @@ chatBtn.addEventListener("click", () => {
   chatModal.show();
 });
 chatBox.innerHTML += `
-      <div class="p-2 mb-2 bg-dark text-white rounded">
+      <div class="p-2 mb-2 moon rounded">
         <b>AI:</b> Halo Saya AI Assistant Roby, mau tanya apa? siapa tau aku bisa bantu :)
       </div>`;
 async function sendMessage() {
@@ -549,7 +549,7 @@ async function sendMessage() {
 
   // Tampilkan pesan user
   chatBox.innerHTML += `
-    <div class="p-2 mb-2 ps-auto bg-light border border-1 text-end rounded">
+    <div class="p-2 mb-2 w-auto align moon border border-1 text-end rounded">
       <b>You:</b> ${text}
     </div>`;
 
@@ -563,7 +563,7 @@ async function sendMessage() {
   // Tampilkan indikator mengetik
   const typingDiv = document.createElement("div");
   typingDiv.id = "typing";
-  typingDiv.className = "p-2 mb-2 bg-dark text-white rounded";
+  typingDiv.className = "p-2 mb-2 moon rounded";
   typingDiv.innerHTML = "<b>AI:</b> ...";
   chatBox.appendChild(typingDiv);
 
@@ -580,7 +580,7 @@ async function sendMessage() {
 
     // Tampilkan jawaban AI
     chatBox.innerHTML += `
-      <div class="p-2 mb-2 bg-dark text-white rounded">
+      <div class="p-2 mb-2 moon rounded">
         <b>AI:</b> ${reply}
       </div>`;
   } catch (err) {
@@ -621,6 +621,4 @@ chatInput.addEventListener("keypress", (e) => {
 
 
 </body>
-
 </html>
-
